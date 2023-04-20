@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora 1</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <main>
         <div id="contenedor">
+            <div id="titulo">
+                <h1>CALCULADORA</h1>
+            </div>
             <div id="display"></div>
             <div id="operacion">
-                <div id="num1"></div>
+                <input type="text" id="num1">
                 <div id="operando"></div>
-                <div id="num2"></div>
+                <input type="text" id="num2">
             </div>
-            <div>
+            <div id="botones">
                 <button id="btn#7">7</button>
                 <button id="btn#8">8</button>
                 <button id="btn#9">9</button>
@@ -35,5 +39,6 @@
             </div>
         </div>
     </main>
+    <script src="./main.js"></script>
 </body>
 </html>
