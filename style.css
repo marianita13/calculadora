@@ -34,7 +34,7 @@ main{
 
 /* interior */
 #titulo{
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     font-family: 'Bungee', cursive;
     font-weight: 400;
     letter-spacing: 3px;
@@ -51,8 +51,8 @@ main{
     text-align: end;
     padding-right: 10px;
     font-size: 30px;
-    padding-top: 8px;
     overflow: hidden;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
