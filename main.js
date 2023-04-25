@@ -149,6 +149,8 @@ botones.addEventListener('click', (evento)=>{
 })
 
 
+
+
 window.addEventListener("keydown", function(event){
     if (event.key==1){
         num1=1
@@ -293,6 +295,53 @@ window.addEventListener("keydown", function(event){
     }
 
     else if  (event.key=='Enter'){
+        console.log(result)
+        result.push(+numeros2)
+        console.log(result)
+        for (i=0; i<result.length; i++){
+            if (result[i]=='+'){
+                total=result[i-1]+result[i+1]
+                result.splice(i-1,3,total)
+                i=0
+            }else if (result[i]=='-'){
+                total=result[i-1]-result[i+1]
+                result.splice(i-1,3,total)
+                i=0
+            }else if (result[i]=='*'){
+                total=result[i-1]*result[i+1]
+                result.splice(i-1,3,total)
+                i=0
+            }else if (result[i]=='/'){
+                total=result[i-1]/result[i+1]
+                result.splice(i-1,3,total)
+                i=0
+            }else if (result.length==1){
+                total=result[0]
+            }else if (result[i+1]=='' || result[i+1]=='' || result[i+1]=='' || result[i+1]==''){
+                total=result[0]
+            }
+        }
+        console.log(total);
+        console.log(result);
+        result=[]
+        numeros2=''
+        result.push(total)
+        resultado.textContent=total
+    }
+
+    else if (event.key=='shift' + '7'){
+        resultado.textContent+="/"
+
+        if (numeros2==''){
+            result.push('/')
+        }else{
+            result.push(+numeros2)
+            result.push('/')
+            numeros2=''
+        }
+    }
+
+    else if (event.key=='shift' + '0'){
         console.log(result)
         result.push(+numeros2)
         console.log(result)
